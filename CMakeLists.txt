@@ -3,4 +3,7 @@ project(Project)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(Project main.cpp)
+include_directories(include)
+file(GLOB_RECURSE SOURCE_FILES "src/*.cpp")
+
+add_executable(Project ${SOURCE_FILES})
